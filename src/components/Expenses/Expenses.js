@@ -4,6 +4,7 @@ import React, { useState } from "react"; //Technically not necessary with JSX, b
 import Card from "../UI/Card.js";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from './ExpensesList';
+import ExpensesChart from "./ExpensesChart";
 /*Instead of creating the expenses div in the App function, I create it here, creating then a component 
 which contains said div and is imported in App.js*/
 function Expenses(props) {
@@ -32,6 +33,7 @@ function Expenses(props) {
         This is the if-else synthax in modern JS:
         (expression ? ifCondition () : elseCondition)
         Further trick? expression && return IfCondition*/}
+        <ExpensesChart expenses={filteredExpenses}/>
         <ExpensesList expenses={filteredExpenses} />;
       </Card>
     </div>
