@@ -101,7 +101,7 @@ const ExpenseForm = (props) => {
           />
         </div>
         <div className="new-expense__actions">
-          <button onClick={}>Cancel</button>
+          <button>Cancel</button>
           <button type="submit">Add Expense</button>{" "}
           {/*The submit
            element here affects the WHOLE FORM --> The "submit" event will affect that*/}
