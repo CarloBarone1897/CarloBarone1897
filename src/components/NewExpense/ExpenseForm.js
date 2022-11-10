@@ -1,5 +1,6 @@
 import "./ExpenseForm.css";
 import React, { useState } from "react";
+import NewExpense from "./NewExpense";
 
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
@@ -101,7 +102,7 @@ const ExpenseForm = (props) => {
           />
         </div>
         <div className="new-expense__actions">
-          <button>Cancel</button>
+          <button type="button" onClick={props.onCancel}>Cancel</button>
           <button type="submit">Add Expense</button>{" "}
           {/*The submit
            element here affects the WHOLE FORM --> The "submit" event will affect that*/}
