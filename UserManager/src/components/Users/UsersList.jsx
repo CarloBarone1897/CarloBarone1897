@@ -1,10 +1,11 @@
 import React from 'react';
 
 import Card from '../UI/Card';
-import styles from './UsersList.module.css';
+import classes from './UsersList.module.css';
+
 const UsersList = (props) => {
   return (
-    <Card className={styles.users}>
+    <Card className={classes.users}>
       <ul>
         {props.users.map((user) => (
           <li key={user.id}>
@@ -14,7 +15,4 @@ const UsersList = (props) => {
       </ul>
     </Card>
   );
-  //The snippet above is sublime, fixes everything so to have like 2 lines in the return statement.
 };
-
-export default UsersList;

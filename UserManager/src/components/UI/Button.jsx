@@ -1,24 +1,16 @@
-import React, { useState } from "react";
-import styles from "./Button.module.css";
+import React from 'react';
+
+import classes from './Button.module.css';
 
 const Button = (props) => {
-  const [buttonStyle, setButtonStyle] = useState(styles.button);
-
-  const buttonHover = (event) => {
-    setButtonStyle(styles.buttonHover);
-  };
-  const buttonFocus = (event) => {
-    setButtonStyle(styles.buttonFocus);
-  };
-
   return (
     <button
-      onMouseOver={buttonHover}
-      onFocus={buttonFocus}
+      className={classes.button}
+      type={props.type || 'button'}
       onClick={props.onClick}
-      className={styles.button}
-      type={props.type || "button"}
-    >{props.children}</button>
+    >
+      {props.children}
+    </button>
   );
 };
 
