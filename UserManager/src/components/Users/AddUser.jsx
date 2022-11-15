@@ -4,6 +4,7 @@ import Card from '../UI/Card';
 import Button from '../UI/Button';
 import ErrorModal from '../UI/ErrorModal';
 import classes from './AddUser.module.css';
+import Wrapper from '../Helpers/Wrapper';
 
 const AddUser = (props) => {
   const [enteredUsername, setEnteredUsername] = useState('');
@@ -43,8 +44,18 @@ const AddUser = (props) => {
     setError(null);
   };
 
-  return (
-    <div>
+  return (<Wrapper>
+    {/*<div> This div is a WRAPPER,
+    so to have only one RETURNED thing - like
+    returning 3 elements in an array. 
+    OBS: ANY ELEMENT DOES THE TRICK (div, custom component,
+    ecc...
+    
+    Also an ARRAY works, BUT - React can return and
+    work with arrays, */}
+
+     {/*This is basically an EMPTY component
+    which just works as wrapper */}
       {error && (
         <ErrorModal
           title={error.title}
@@ -71,7 +82,7 @@ const AddUser = (props) => {
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </Wrapper>
   );
 };
 
