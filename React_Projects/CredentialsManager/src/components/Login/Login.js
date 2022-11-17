@@ -15,7 +15,8 @@ const Login = (props) => {
     setFormIsValid(
       enteredEmail.includes('@') && enteredPassword.trim().length > 6
     );
-  }, []);
+  }, []); //If I don't add the dependencies, the Effect will load only once
+  //At the beginning.
 
   const emailChangeHandler = (event) => {
     setEnteredEmail(event.target.value);
