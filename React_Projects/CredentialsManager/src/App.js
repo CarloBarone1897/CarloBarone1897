@@ -13,7 +13,7 @@ function App() {
       setIsLoggedIn(true);
     }
   }, []); //I just moved into the useEffect all the functions before, the dependencies I'll add later
-
+  //Usually you want a list of dependencies, otherwise what's the point of the useEffect() hook?
   const [isLoggedIn, setIsLoggedIn] = useState(false); //Here I'd like to store something
   //Usually COOKIES and LOCAL STORAGES are used --> Here I'll go with LocalStorage.
 
