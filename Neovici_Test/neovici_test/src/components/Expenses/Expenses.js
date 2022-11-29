@@ -33,7 +33,7 @@ function Expenses(props) {
         This is the if-else synthax in modern JS:
         (expression ? ifCondition () : elseCondition)
         Further trick? expression && return IfCondition*/}
-        <ExpensesChart expenses={filteredExpenses}/>
+        
         <ExpensesList expenses={filteredExpenses} />;
       </Card>
     </div>
