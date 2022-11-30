@@ -18,7 +18,7 @@ const App = () => {
       <SearchingBar />
       <CocktailResult />
       <ShoppingList />
-      <Toaster />
+      <Toaster /> 
     </div>
   );
 };
