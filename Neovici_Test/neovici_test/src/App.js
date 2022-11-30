@@ -1,7 +1,7 @@
 //Not put in the components folder 'cause it's the "main" one.
 //Now I will import my custom componente ExpenseItem
 
-import React, { useState } from "react"; //Technically not necessary with JSX, but we should always keep in mind that it works under the hood
+import React from "react"; //Technically not necessary with JSX, but we should always keep in mind that it works under the hood
 import SearchingBar from "./components/SearchingBar";
 import CocktailResult from "./components/CocktailResult";
 import ShoppingList from "./components/ShoppingList";
@@ -16,7 +16,6 @@ const App = () => {
   return (
     <div className="container">
       <SearchingBar />
-      <CocktailResult />
       <ShoppingList />
       <Toaster /> 
     </div>
