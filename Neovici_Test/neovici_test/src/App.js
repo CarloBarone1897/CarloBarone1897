@@ -8,7 +8,15 @@ import ShoppingList from "./components/ShoppingList";
 import Toaster from "./components/Toaster";
 
 const App = () => {
-  fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita");
+  fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita").then(response =>{
+    console.log(response.json());  
+  return response.json();
+  });
+
+  const toasterHandler = ()=> {
+
+  };
+  
   //There is HTML in JS --> JSX, it's a special syntax created by the React team
   //What I did below is to create the Expenses component and import it as a component
   //Then I passed the "expenses" array as a "props" parameter for the function/component "Expenses".
@@ -17,7 +25,7 @@ const App = () => {
     <div className="container">
       <SearchingBar />
       <ShoppingList />
-      <Toaster /> 
+      <Toaster message={toasterHandler}/>
     </div>
   );
 };
